@@ -48,6 +48,14 @@ public class OperationResult {
         return result;
     }
 
+    public boolean isSuccess(){
+        return resultType.equals(ResultType.SUCCESS);
+    }
+
+    public boolean hasFailed(){
+        return resultType.equals(ResultType.FAIL);
+    }
+
     public static OperationResult success(){
         return OperationResult
                 .builder()
